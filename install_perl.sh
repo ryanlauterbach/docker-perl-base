@@ -2,7 +2,7 @@
 
 PLENV_ROOT=/opt/plenv
 
-BUILD_OPTS="-j9 -Dman1dir=none -Dman3dir=none -Dsiteman1dir-none -Dsiteman3dir=none"
+BUILD_OPTS="-j9 -Dman1dir=none -Dman3dir=none -Dsiteman1dir=none -Dsiteman3dir=none"
 
 if pushd $PLENV_ROOT; then
     git pull
