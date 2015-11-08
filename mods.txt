@@ -25,8 +25,6 @@ Encode
 FCGI
 FCGI::Client
 FCGI::ProcManager
-File::Temp
-FindBin
 Gazelle
 HTML::Entities
 HTTP::Server::Simple::PSGI
@@ -71,7 +69,6 @@ Template::Plugin::DateTime::Format
 Template::Plugin::Math
 Template::Plugin::Number::Format
 Term::Size::Any
-Test::More
 Test::WWW::Mechanize::PSGI
 Text::CSV::Simple
 Text::CSV_XS
