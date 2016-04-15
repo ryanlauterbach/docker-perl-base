@@ -1,6 +1,6 @@
 FROM debian:jessie-backports
 
-RUN apt-get update && apt-get install -y \
+RUN apt-get update && apt-get upgrade -y && apt-get install -y \
     curl \
     git \
     build-essential \
@@ -30,8 +30,21 @@ RUN apt-get update && apt-get install -y \
     automake \
     libevent-dev \
     libncurses5-dev && \
-    apt-get clean && \
-    rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* && \
+\
+    # clean up apt
+    apt-get clean -y && \
+    apt-get autoclean -y && \
+    apt-get autoremove -y && \
+\
+    # remove temp files and apt crumbs
+    rm -rf \
+        /var/lib/apt/lists/* \
+        /tmp/* \
+        /var/tmp/* \
+        /opt/plenv/cache/* \
+        /usr/share/locale/* \
+        /var/cache/debconf/*-old \
+        /usr/share/doc/* && \
     mkdir /build
 
 ADD ./plenv.sh /etc/profile.d/plenv.sh

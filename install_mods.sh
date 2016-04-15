@@ -24,4 +24,4 @@ do
     cat mods.txt | cpanm -n
 done
 
-rm -rf ~/.cpanm $PLENV_ROOT/build/*
+rm -rf ~/.cpan* $PLENV_ROOT/build/*
