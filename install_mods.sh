@@ -5,7 +5,7 @@
 # See perl-build tag 1.12
 # TODO: patch perl-build
 
-. /etc/profile
+. /etc/profile.d/plenv.sh
 
 cat perls.txt | while read version
 do
